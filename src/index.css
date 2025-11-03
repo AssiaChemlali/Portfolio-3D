@@ -1,11 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 
-html,body{
-  font-family: "Mona Sans",sans-serif;
+html,
+body {
+  font-family: "Mona Sans", sans-serif;
   background-color: #000;
-  color:white;
+  color: white;
   scroll-behavior: smooth;
+  width: 100vw;
+  ;
 
 }
 
+section {
+  width: 100dvw;
+}
+
+@theme {
+  --color-white-50: #d9ecff;
+  --color-black-200: #282732;
+  --color-black-50: #1c1c21;
+}
+
+@layer components {
+  .hero-layout {
+    @apply relative z-10 flex items-start h-[80vh] xl:items-center xl:mt-20 md:h-dvh
+  }
+
+  .hero-text {
+    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+
+    img {
+      @apply size-8 md:size-10 object-contain
+    }
+
+    .slide {
+      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+    }
+  }
+
+  .cta-wrapper {
+    @apply relative z-20 cursor-pointer
+  }
+
+  .cta-button {
+    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+
+    .bg-circle {
+      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 w-[120%] h-[120%] group-hover:size-10 group-hover:right-10 rounded-full bg-white-50 transition-all duration-500;
+    }
+
+    .text {
+      @apply uppercase md:text-lg text-black transition-all duration-500 group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+    }
+
+    .arrow-wrapper {
+      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden text-black-50;
+
+      svg {
+        @apply size-7 xl:-translate-y-30 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500
+      }
+
+    }
+  }
+ .hero-3d-layout{
+  @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+ }
+
+}

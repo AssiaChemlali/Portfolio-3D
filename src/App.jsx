@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from './sections/Navbar';
+import Hero from './sections/Hero'
 function App() {
 
   return (
     <>
-    <p className="text-red-500">  hello</p>
+    <Navbar/>
+    <Hero/>
    
     </>
   )

@@ -22,10 +22,7 @@ const words = [
   { text: "Concepts", imgPath: "/images/concepts.svg" },
   { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas1", imgPath: "/images/ideas.svg" },
-  { text: "Concepts1", imgPath: "/images/concepts.svg" },
-  { text: "Designs1", imgPath: "/images/designs.svg" },
-  { text: "Code1", imgPath: "/images/code.svg" },
+  
 ];
 
 const counterItems = [
