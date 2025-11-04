@@ -25,7 +25,7 @@ section {
 
 @layer components {
   .hero-layout {
-    @apply relative z-10 flex items-center h-[80vh] xl:items-center   md:h-dvh  border  flex-col xl:flex-row ;
+    @apply relative z-10 flex items-center h-[80vh] xl:items-center   md:h-dvh  flex-col xl:flex-row ;
   }
 
   .hero-text {
@@ -83,7 +83,37 @@ section {
   animation:wordSlider 21s infinite cubic-bezier(0.09, 0.81, 0.3, 0.99)
 }
 
+
 @keyframes wordSlider {
-  
-  
+  0% {
+    transform: translateY(0.5%);
+  }
+
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+
+  25% {
+    transform: translateY(-25%);
+  }
+
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+
+  50% {
+    transform: translateY(-50%);
+  }
+
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+
+  75% {
+    transform: translateY(-75%);
+  }
+
+  87.5% {
+    transform: translateY(-87.5%);
+  }
 }

@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
       <div className="hero-layout  ">
         {/* LEFT */}
-        <div className='flex flex-col justify-center px-5 xl:w-[50%] md:px-20  w-screen mb-10'>
+        <div className='flex flex-col justify-center px-5 xl:w-[50%] md:px-20  w-screen mb-10 '>
           <div className="flex flex-col gap-7  ">
             <div className="hero-text ">
               <h1>Shaping
