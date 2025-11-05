@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
   
-    <header className={`fixed w-full  left-1/2 py-5 px-5 md:px-20 -translate-1/2 transition-all duration-300 ease-in-out z-100 ${scrolled ? 'top-0 bg-black':'md:top-10 top-0 bg-transparent'}`}>
+    <header className={`fixed w-full  left-1/2 py-5 px-5 md:px-20 -translate-1/2 transition-all duration-300 ease-in-out z-100 ${scrolled ? 'top-0 bg-black  mt-10':'md:top-10 top-0 bg-transparent '}`}>
 
       <div className='mx-auto flex items-center   justify-between '>
         
