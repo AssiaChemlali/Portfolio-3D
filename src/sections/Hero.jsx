@@ -4,6 +4,8 @@ import { words } from '../data/index'
 import { IoIosArrowRoundDown } from "react-icons/io";
 import {useGSAP} from '@gsap/react'
 import gsap from "gsap"
+import Particles from '../components/Particles';
+import AnimatedCounter from '../components/AnimatedCounter';
 const Hero = () => {
     useGSAP(()=>{
       gsap.fromTo('.hero-text h1',{
@@ -63,9 +65,12 @@ const Hero = () => {
         <figure className=''>
           <div className="hero-3d-layout ">
             <img src="/images/img-hero.png" alt="" />
+             {/* <Particles count={100}/> */}
           </div>
         </figure>
       </div>
+
+      <AnimatedCounter/>
 
 
     </section>

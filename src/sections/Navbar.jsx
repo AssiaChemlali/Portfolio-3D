@@ -22,14 +22,14 @@ const Navbar = () => {
         <a href="#hero" className='text-semibold text-xl  md:text-2xl text-white-50 font-bold transition-transform duration-300 hover:scale-105'>Adrian | JSM</a>
         
         {/* desktop menu */}
-        <nav className='hidden lg:flex'>
-          <ul className='flex flex-row items-center gap-5 text-white-50 hover:text-white '>
+        <nav className='hidden lg:flex items-center'>
+          <ul className='flex space-x-8 '>
             {
               navLinks.map((link)=>(
-                <li key={link.name} className=''>
+                <li key={link.name} className='text-white-50 group relative'>
                   <a href={link.link}>
-                    <span>{link.name}</span>
-                    <span className=''></span>
+                    <span className='transition-colors duration-300 hover:text-white'>{link.name}</span>
+                    <span className=' hover:text-white absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full'></span>
                   </a>
                 </li>
               ))
