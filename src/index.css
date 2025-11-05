@@ -32,9 +32,13 @@ section {
       rgba(255, 255, 255, 0) 100%);
 }
 @theme {
+  --font-sans: "Mona Sans", sans-serif;
   --color-white-50: #d9ecff;
-  --color-black-200: #282732;
   --color-black-50: #1c1c21;
+  --color-black-100: #0e0e10;
+  --color-black-200: #282732;
+  --color-blue-50: #839cb5;
+  --color-blue-100: #2d2d38;
 }
 
 @layer components {
@@ -135,7 +139,6 @@ section {
 
 
 .marquee-box {
-  
   animation: marquee 60s linear infinite;
 }
 
