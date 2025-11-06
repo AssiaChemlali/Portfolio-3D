@@ -6,7 +6,7 @@ import Logos from './sections/Logos';
 import Features from './sections/Features';
 import Experience from './sections/Experience'
 import Titimonials from './sections/Titimonials'
-
+import Skills from './sections/Skills';
 function App() {
 
   return (
@@ -18,6 +18,7 @@ function App() {
       <Features/>
       <Experience/>
       <Titimonials/>
+      <Skills/>
     </>
   )
 }
