@@ -29,8 +29,8 @@ const Hero = () => {
       </div>
       <div className="hero-layout  ">
         {/* LEFT */}
-        <div className='flex flex-col justify-center px-5 xl:w-[50%] md:px-20  w-screen mb-10 '>
-          <div className="flex flex-col gap-7  ">
+        <div className='flex flex-col justify-center px-5 xl:w-[50%] md:px-20 h-screen w-screen  mb-10  '>
+          <div className="flex flex-col gap-7  h-full  justify-center">
             <div className="hero-text ">
               <h1>Shaping
                 <span className="slide">
@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
 
         {/* RIGHT */}
-        <figure className=''>
+        <figure >
           <div className="hero-3d-layout ">
             <img src="/images/img-hero.png" alt="" />
              {/* <Particles count={100}/> */}

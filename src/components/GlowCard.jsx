@@ -20,7 +20,7 @@ const GlowCard = ({ card, index }) => {
     <div
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
-      className='w-full xl:w-2/6 card card-border  rounded-xl p-10 mb-5 ' key={card.title}>
+      className='card card-border  rounded-xl p-10 mb-5 ' key={card.title}>
       <div className="glow" />
 
       <div className="flex items-center gap-1 mb-5">

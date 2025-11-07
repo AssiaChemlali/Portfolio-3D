@@ -12,11 +12,14 @@ const Experience = () => {
       <div className="mt-20 ">
         {expCards.map((card, index) => (
           <div className='flex xl:flex-row xl:justify-between gap-10 flex-col-reverse ' key={card.title}>
+            <div className="w-full xl:w-3/6">
+              <GlowCard card={card} index={index} />
+            </div>
 
-            <GlowCard card={card} index={index} />
-            <div className='w-full xl:w-4/6 xl:gap-20 flex flex-row  gap-5  '>
-              <div className="flex flex-col  gap-20 ">
+            <div className='w-full xl:w-4/6 xl:gap-20 flex flex-row  gap-5  mb-5 '>
+              <div className="flex flex-col items-center justify-center relative gap-2">
                 <img src={card.logoPath} alt="logo" />
+                <span className='w-1 h-full bg-black-200 top-0 rounded-full left-20'></span>
               </div>
 
               <div className='flex flex-col  gap-5 '>
