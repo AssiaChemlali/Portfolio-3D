@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import TitleHeader from '../components/TitleHeader'
 import { IoIosArrowRoundDown } from "react-icons/io";
 import emailjs from "@emailjs/browser"
+import Button from '../components/Button';
 const Contact = () => {
 
   const formRef = useRef()
@@ -80,14 +81,14 @@ console.log("sending")
               placeholder="How can I help you"
               className='p-5 bg-black-200 rounded-lg text-white-50' required></textarea>
           </div>
-          <button type='submit'>
-            <div className="cta-button group">
-              <div className="bg-circle"></div>
-              <p className='text'> {
-                loading ? "Sending ..." : "send message"}</p>
-              <span className='arrow-wrapper'><IoIosArrowRoundDown /></span>
-            </div>
-          </button>
+         
+
+           <Button
+              text= {
+                loading ? "Sending ..." : "send message"}
+              id="button"
+              type="submit"
+              icon={<IoIosArrowRoundDown />} />
         </form>
         {/* RIGHT */}
         <div className='w-full xl:w-[60%] flex flex-col '>

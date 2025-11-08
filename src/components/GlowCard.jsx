@@ -1,9 +1,8 @@
 import React from 'react'
 import { useRef } from 'react';
 
-const GlowCard = ({ card, index }) => {
-
-  const cardRefs = useRef([]);
+const GlowCard = ({ card, index ,children}) => {
+const cardRefs = useRef([]);
 
   const handleMouseMove = (index) => (e) => {
     const card = cardRefs.current[index];
@@ -17,21 +16,27 @@ const GlowCard = ({ card, index }) => {
     card.style.setProperty('--start', angle + 60)
   }
   return (
+
     <div
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
-      className='card card-border  rounded-xl p-10 mb-5 ' key={card.title}>
+      className='card card-border timeline-card rounded-xl p-10 mb-5 break-after-avoid-column'>
       <div className="glow" />
+      <div className='flex items-center gap-1 mb-5'>
+        {
+          Array.from({ length: 5 }, (_, i) => (
+            <img src="/images/star.png" key={i} alt="star" className='size-5' />
 
-      <div className="flex items-center gap-1 mb-5">
-        {Array.from({ length: 5 }, (_, i) => (
-          <img src="./images/star.png" alt="" key={i} />
-        ))}
+          ))
+        }
       </div>
+      <div className="mb-5">
+        <p className="text-white-50 text-lg">
+          {card.review}
+        </p>
+      </div>
+      {children}
 
-
-      <p className='text-white-50 text-lg mb-5'>{card.review}</p>
-      <img src={card.imgPath} alt="" className='w-40' />
     </div>
   )
 }

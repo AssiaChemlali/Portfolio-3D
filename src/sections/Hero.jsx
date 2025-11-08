@@ -55,8 +55,7 @@ const Hero = () => {
             <p className='relative z-10 pointer-events-none text-white-50 md:text-xl'>Hi, I’m Adrian, a developer based in Croatia with a passion for code.</p>
             <Button
               text="See My Work"
-              id="button"
-              className="md:w-80 md:h-16 w-60 h-12"
+              scrollTo="work"
               icon={<IoIosArrowRoundDown />} />
           </div>
         </div>

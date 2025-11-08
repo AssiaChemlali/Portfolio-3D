@@ -11,9 +11,12 @@ const Experience = () => {
 
       <div className="mt-20 ">
         {expCards.map((card, index) => (
-          <div className='flex xl:flex-row xl:justify-between gap-10 flex-col-reverse ' key={card.title}>
+          <div className='flex xl:flex-row xl:justify-between gap-10 flex-col-reverse  exp-card-wrapper' key={card.title}>
             <div className="w-full xl:w-3/6">
-              <GlowCard card={card} index={index} />
+              <GlowCard card={card} index={index} >
+                <img src={card.imgPath} alt="" className='w-40' />
+              </GlowCard>
+
             </div>
 
             <div className='w-full xl:w-4/6 xl:gap-20 flex flex-row  gap-5  mb-5 '>
