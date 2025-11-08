@@ -56,6 +56,7 @@ const Hero = () => {
             <Button
               text="See My Work"
               scrollTo="work"
+               type="button"
               icon={<IoIosArrowRoundDown />} />
           </div>
         </div>
