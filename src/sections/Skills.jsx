@@ -1,6 +1,7 @@
 import React from 'react'
 import TitleHeader from '../components/TitleHeader'
 import { techStackImgs } from '../data/index'
+import { easeIn, motion } from 'motion/react'
 const Skills = () => {
   return (
     <section id="skills" className='px-5  mt-20'>
@@ -12,10 +13,21 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 space-x-10 items-center mt-20 ">
           {techStackImgs.map((stack, index) => (
-            <div key={index} className="bg-black-100 px-2 md:py-30 py-20 md:rounded-full  flex flex-col items-center border border-black-200">
+            <motion.div 
+
+            initial={{opacity:0,y:100}}
+            animate={{opacity:1,y:0}}
+            transition={{
+              duration:2,
+              delay:1,
+              ease:easeIn
+
+            }}
+            key={index} className="bg-black-100 px-2 md:py-30 py-20 md:rounded-full  flex flex-col items-center border border-black-200">
               <img src={stack.imgPath} alt="" />
               <h1 className='text-center text-2xl md:text-23xl font-white-50 font-semibold mt-10'>{stack.name}</h1>
-            </div>
+
+            </motion.div>
           ))}
 
         </div>

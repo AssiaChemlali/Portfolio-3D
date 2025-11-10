@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef } from 'react';
-
+import { easeInOut, motion } from 'motion/react';
 const GlowCard = ({ card, index ,children}) => {
 const cardRefs = useRef([]);
 
@@ -17,7 +17,15 @@ const cardRefs = useRef([]);
   }
   return (
 
-    <div
+    <motion.div
+    initial={{opacity:0,x:-100}}
+    animate={{opacity:1,x:0}}
+  
+    whileHover={{  
+      duration:2,
+      delay:1,
+      ease:easeInOut
+    }}
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
       className='card card-border timeline-card rounded-xl p-10 mb-5 break-after-avoid-column'>
@@ -37,7 +45,7 @@ const cardRefs = useRef([]);
       </div>
       {children}
 
-    </div>
+    </motion.div>
   )
 }
 
