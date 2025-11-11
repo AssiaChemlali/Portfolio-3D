@@ -9,10 +9,13 @@ import Titimonials from './sections/Titimonials'
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+
+import Header from './sections/Header';
 function App() {
 
   return (
     <>
+    {/* <Header/> */}
       <Navbar />
       <Hero />
       <Work />

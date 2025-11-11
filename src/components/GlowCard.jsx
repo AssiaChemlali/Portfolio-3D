@@ -15,17 +15,12 @@ const cardRefs = useRef([]);
     angle = (angle + 360) % 360;
     card.style.setProperty('--start', angle + 60)
   }
+
+
   return (
 
     <motion.div
-    initial={{opacity:0,x:-100}}
-    animate={{opacity:1,x:0}}
-  
-    whileHover={{  
-      duration:2,
-      delay:1,
-      ease:easeInOut
-    }}
+       
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
       className='card card-border timeline-card rounded-xl p-10 mb-5 break-after-avoid-column'>

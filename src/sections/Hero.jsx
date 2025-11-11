@@ -18,12 +18,12 @@ const Hero = () => {
         <div className='flex flex-col justify-center px-5 xl:w-[50%] md:px-20 h-screen w-screen  mb-10  '>
           <div className="flex flex-col gap-7  h-full  justify-center">
             <motion.div className="hero-text "
-              initial={{ y: 50,opacity:0 }}
-              animate={{ y: 0 ,opacity:1}}
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 1,
                 delay: 0.2,
-                ease:easeInOut
+                ease: easeInOut
 
               }}
             >
@@ -78,7 +78,14 @@ const Hero = () => {
         {/* RIGHT */}
         <figure >
           <div className="hero-3d-layout ">
-            <img src="/images/img-hero.png" alt="" />
+            <motion.img
+             initial={{opacity:0,scale:0.8}}
+              whileInView={{opacity:1,scale:1}}
+             transition={{duration:1}}
+             viewport={{once:true}}
+            //  whileHover={{scale:1.2}}
+
+              src="/images/img-hero.png" alt="" />
             {/* <Particles count={100}/> */}
           </div>
         </figure>
