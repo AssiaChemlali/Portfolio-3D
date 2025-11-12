@@ -1,4 +1,8 @@
 const navLinks = [
+   {
+    name: "Home",
+    link: "#home",
+  },
   {
     name: "Work",
     link: "#work",
@@ -14,6 +18,10 @@ const navLinks = [
   {
     name: "Testimonials",
     link: "#testimonials",
+  },
+   {
+    name: "Contact",
+    link: "#contact",
   },
 ];
 

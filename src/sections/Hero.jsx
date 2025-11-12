@@ -9,7 +9,7 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import { easeInOut, motion } from "motion/react"
 const Hero = () => {
   return (
-    <section id="hero" className='relative overflow-hidden pt-30'>
+    <section id="home" className='relative overflow-hidden pt-30'>
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="" />
       </div>

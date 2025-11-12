@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 const Titimonials = () => {
 
   return (
-    <section className='w-full px-5 md:px-20 mt-20' id="tistimonails">
+    <section className='w-full px-5 md:px-20 mt-20' id="testimonials">
       <div className=''>
         <TitleHeader
           subtitle="client feedback highlights"
