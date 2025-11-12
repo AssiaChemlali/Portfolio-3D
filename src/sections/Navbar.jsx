@@ -1,19 +1,34 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { navLinks } from '../data'
 import { motion } from 'motion/react'
-
+import { LuSunMedium } from "react-icons/lu";
+import { FaRegMoon } from "react-icons/fa6";
 const Navbar = () => {
+  const [theme, setTheme] = useState('dark')
   const [active, setActive] = useState(navLinks[0].name)
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
     opacity: 0
   })
+
+  function handleTheme(e) {
+    e.preventDefault()
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+  }
+
+  useEffect(() => {
+    document.body.classList.remove("dark", 'light');
+    document.body.classList.add(theme)
+
+  }, [theme])
+
   const [scrolled, setScrolled] = useState(false)
 
   const refs = useRef([])
 
   useEffect(() => {
+
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10
       setScrolled(isScrolled)
@@ -55,7 +70,7 @@ const Navbar = () => {
         const scrollY = window.scrollY + window.innerHeight / 2;
 
         if (scrollY >= top && scrollY < top + height) {
-         
+
           if (activeIndex.current !== index) {
             activeIndex.current = index
             updatePosition(index)
@@ -71,7 +86,7 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-     handleScroll(); // run once on load
+    handleScroll(); // run once on load
     return () => window.removeEventListener('scroll', handleScroll);
 
   }, [active, activeIndex]);
@@ -85,7 +100,7 @@ const Navbar = () => {
 
         className='mx-auto flex items-center w-fit justify-between border-2 border-black rounded-full px-5 bg-white '>
 
-        <a href="." className='text-semibold text-xl  md:text-2xl text-black font-bold transition-transform duration-300 '>Adrian | JSM</a>
+        <a href="." className='text-semibold text-xl  md:text-2xl text-black font-bold transition-transform duration-300 '>Adrian </a>
 
         {/* de activeIndex.current=index sktop menu */}
         <nav className='hidden lg:flex items-center'>
@@ -120,11 +135,17 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <div className='flex group'>
-          <a className=' bg-black rounded-lg text-white py-2 px-5 font-medium  transition-colors  duration-300 ' href='#contact'>
+        <div className=' border border-blue-500 rounded-full'>
+          {/* <a className=' bg-black rounded-lg text-white py-2 px-5 font-medium  transition-colors  duration-300 ' href='#contact'>
             <span className=' transition-colors duration-300'> Buy Now</span>
-          </a>
+          </a> */}
+          <button className=' p-2 text-blue-400 '
+            onClick={handleTheme}
+          >
+            {theme === 'light' ? <LuSunMedium /> : <FaRegMoon />}
 
+
+          </button>
         </div>
 
       </div>

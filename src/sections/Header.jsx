@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <header className={`fixed w-full left-1/2 py-6 px-5 md:px-20 -translate-x-1/2 transition-all duration-300 ease-in-out z-100 mt-5  ${scrolled ? 'md:top-10' : 'md:top-10 top-0 bg-transparent'}`}>
       <div className='mx-auto flex items-center w-fit justify-between border-2 border-black rounded-full px-5 bg-white'>
-        <a href="#hero" className='text-semibold text-xl md:text-2xl text-black font-bold transition-transform duration-300 shadow-lg shadow-black/[0.03px] backdrop-blur-[0.5px]'>Adrian | JSM</a>
+        <a href="#hero" className='text-semibold text-xl md:text-2xl text-black font-bold transition-transform duration-300 shadow-lg shadow-black/[0.03px] backdrop-blur-[0.5px]'>Adrian </a>
 
         <nav className='hidden lg:flex items-center'>
           <ul onMouseLeave={handleLeaveMouse} className='relative mx-auto flex w-fit p-1 px-10'>

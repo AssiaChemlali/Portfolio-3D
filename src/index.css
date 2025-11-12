@@ -4,7 +4,7 @@
 html,
 body {
   font-family: "Mona Sans", sans-serif;
-  background-color: #000;
+  background-color: var(--color-black-100);
   color: white;
   scroll-behavior: smooth;
   width: 100vw;
@@ -13,6 +13,32 @@ body {
 
 }
 
+@theme {
+  --font-sans: "Mona Sans", sans-serif;
+  --color-white-50: #d9ecff;
+  --color-black-50: #1c1c21;
+  --color-black-100: #0e0e10;
+  --color-black-200: #282732;
+  --color-blue-50: #839cb5;
+  --color-blue-100: #2d2d38;
+}
+.dark {
+
+  --color-white-50: #d9ecff;
+  --color-black-50: #1c1c21;
+  --color-black-100: #0e0e10;
+  --color-black-200: #282732;
+
+}
+
+.light {
+ 
+  --color-white-50: #000;
+  --color-black-50: #fff;
+  --color-black-100: #fdf7f7;
+  --color-black-200: #eee;
+
+}
 section {
   width: 100dvw;
 }
@@ -30,15 +56,6 @@ section {
   background: linear-gradient(-90deg,
       rgba(0, 0, 0, 1) 0%,
       rgba(255, 255, 255, 0) 100%);
-}
-@theme {
-  --font-sans: "Mona Sans", sans-serif;
-  --color-white-50: #d9ecff;
-  --color-black-50: #1c1c21;
-  --color-black-100: #0e0e10;
-  --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
 }
 
 @layer components {

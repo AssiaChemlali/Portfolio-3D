@@ -16,11 +16,13 @@ function App() {
   const [loading, setLoading] = useState(true)
   return (
     <div className='relative'>
-      {loading && <Loader />}
-      {setTimeout(()=>{
 
+      {/* {loading && <Loader />} */}
+      {/* {setTimeout(()=>{
         setLoading(false)
-      },1000)}
+      },1000)} */}
+
+
       <Navbar />
       <Hero />
       <Work />
